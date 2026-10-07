@@ -1,0 +1,12 @@
+{
+  "category": "machine_learning",
+  "status": "answered",
+  "answer": "Việc chỉ fit StandardScaler trên tập train để tránh hiện tượng 'Data Leakage' (rò rỉ dữ liệu). Nếu fit trên toàn bộ dữ liệu, thông tin từ tập test (như giá trị trung bình và độ lệch chuẩn) sẽ bị lộ vào quá trình huấn luyện, khiến kết quả đánh giá mô hình không còn khách quan.",
+  "steps": [
+    "Fit StandardScaler trên tập train để tính mean và std.",
+    "Sử dụng các thông số đó để transform tập train.",
+    "Sử dụng chính các thông số từ tập train để transform tập test."
+  ],
+  "follow_up": "Bạn đã áp dụng StandardScaler vào dự án Diabetes Prediction chưa?",
+  "source": "llm"
+}

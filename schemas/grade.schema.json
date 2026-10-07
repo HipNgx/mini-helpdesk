@@ -1,0 +1,78 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "functionality": {
+      "maximum": 4,
+      "minimum": 0,
+      "title": "Functionality",
+      "type": "integer"
+    },
+    "edge_cases": {
+      "maximum": 2,
+      "minimum": 0,
+      "title": "Edge Cases",
+      "type": "integer"
+    },
+    "code_quality": {
+      "maximum": 2,
+      "minimum": 0,
+      "title": "Code Quality",
+      "type": "integer"
+    },
+    "explanation": {
+      "maximum": 2,
+      "minimum": 0,
+      "title": "Explanation",
+      "type": "integer"
+    },
+    "total": {
+      "maximum": 10,
+      "minimum": 0,
+      "title": "Total",
+      "type": "integer"
+    },
+    "reasons": {
+      "items": {
+        "maxLength": 2000,
+        "minLength": 1,
+        "pattern": "\\S",
+        "type": "string"
+      },
+      "maxItems": 4,
+      "minItems": 4,
+      "title": "Reasons",
+      "type": "array"
+    },
+    "hints": {
+      "items": {
+        "maxLength": 2000,
+        "minLength": 1,
+        "pattern": "\\S",
+        "type": "string"
+      },
+      "maxItems": 6,
+      "minItems": 1,
+      "title": "Hints",
+      "type": "array"
+    },
+    "conclusion": {
+      "maxLength": 2000,
+      "minLength": 1,
+      "pattern": "\\S",
+      "title": "Conclusion",
+      "type": "string"
+    }
+  },
+  "required": [
+    "functionality",
+    "edge_cases",
+    "code_quality",
+    "explanation",
+    "total",
+    "reasons",
+    "hints",
+    "conclusion"
+  ],
+  "title": "Grade",
+  "type": "object"
+}

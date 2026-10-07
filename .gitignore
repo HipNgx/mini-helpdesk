@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+# Mật khẩu và API keys
+.env
+.streamlit/secrets.toml

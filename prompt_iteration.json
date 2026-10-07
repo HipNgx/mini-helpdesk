@@ -1,0 +1,30 @@
+{
+  "reason": "Đầu ra ban đầu khẳng định mất cân bằng quá chắc từ hai metric; thêm ràng buộc phân biệt kết luận và giả thuyết.",
+  "question": "Em có accuracy 0.86 nhưng recall 0.12, nên kết luận gì?",
+  "before": {
+    "category": "machine_learning",
+    "status": "answered",
+    "answer": "Mô hình của bạn đang bị mất cân bằng nghiêm trọng. Accuracy cao (0.86) nhưng Recall rất thấp (0.12) cho thấy mô hình hầu như không nhận diện được các ca bệnh (Positive), có thể do tập dữ liệu bị lệch (imbalanced data) khiến mô hình dự đoán hầu hết là âm tính.",
+    "steps": [
+      "Kiểm tra lại phân phối nhãn trong tập dữ liệu.",
+      "Thử sử dụng kỹ thuật Oversampling (SMOTE) hoặc Undersampling.",
+      "Thay đổi ngưỡng phân loại (classification threshold).",
+      "Sử dụng các metric khác như F1-score hoặc AUC-ROC."
+    ],
+    "follow_up": "Tập dữ liệu của bạn có tỷ lệ mẫu bệnh và không bệnh là bao nhiêu?",
+    "source": "llm"
+  },
+  "after": {
+    "category": "machine_learning",
+    "status": "needs_clarification",
+    "answer": "Accuracy cao nhưng Recall rất thấp cho thấy mô hình đang bỏ sót hầu hết các mẫu dương (bệnh nhân tiểu đường). Tuy nhiên, chưa thể kết luận ngay là do dữ liệu mất cân bằng hay lỗi pipeline mà cần kiểm tra thêm.",
+    "steps": [
+      "Kiểm tra phân bố nhãn (class distribution) của tập dữ liệu.",
+      "Xem Confusion Matrix để biết số lượng False Negative.",
+      "Kiểm tra ngưỡng phân loại (threshold) hiện tại.",
+      "Đánh giá lại mục tiêu: bạn ưu tiên tránh bỏ sót bệnh nhân hay tránh chẩn đoán nhầm?"
+    ],
+    "follow_up": "Bạn có thể cung cấp phân bố nhãn và Confusion Matrix của mô hình không?",
+    "source": "llm"
+  }
+}

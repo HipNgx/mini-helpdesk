@@ -1,0 +1,56 @@
+{
+  "$defs": {
+    "Flashcard": {
+      "additionalProperties": false,
+      "properties": {
+        "question": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Question",
+          "type": "string"
+        },
+        "answer": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "pattern": "\\S",
+          "title": "Answer",
+          "type": "string"
+        },
+        "difficulty": {
+          "enum": [
+            "easy",
+            "medium",
+            "hard"
+          ],
+          "title": "Difficulty",
+          "type": "string"
+        }
+      },
+      "required": [
+        "question",
+        "answer",
+        "difficulty"
+      ],
+      "title": "Flashcard",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "flashcards": {
+      "items": {
+        "$ref": "#/$defs/Flashcard"
+      },
+      "maxItems": 3,
+      "minItems": 3,
+      "title": "Flashcards",
+      "type": "array"
+    }
+  },
+  "required": [
+    "flashcards"
+  ],
+  "title": "Flashcards",
+  "type": "object"
+}

@@ -1,0 +1,50 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "bugs": {
+      "items": {
+        "maxLength": 2000,
+        "minLength": 1,
+        "pattern": "\\S",
+        "type": "string"
+      },
+      "maxItems": 6,
+      "title": "Bugs",
+      "type": "array"
+    },
+    "hints": {
+      "items": {
+        "maxLength": 2000,
+        "minLength": 1,
+        "pattern": "\\S",
+        "type": "string"
+      },
+      "maxItems": 6,
+      "minItems": 1,
+      "title": "Hints",
+      "type": "array"
+    },
+    "check_question": {
+      "maxLength": 2000,
+      "minLength": 1,
+      "pattern": "\\S",
+      "title": "Check Question",
+      "type": "string"
+    },
+    "conclusion": {
+      "maxLength": 2000,
+      "minLength": 1,
+      "pattern": "\\S",
+      "title": "Conclusion",
+      "type": "string"
+    }
+  },
+  "required": [
+    "bugs",
+    "hints",
+    "check_question",
+    "conclusion"
+  ],
+  "title": "Feedback",
+  "type": "object"
+}
